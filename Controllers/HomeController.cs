@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MvcMovie.Models;
+using System.Threading.Tasks;
 
 namespace MvcMovie.Controllers
 {
+    
+   
     public class HomeController : Controller
     {
+        
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -23,9 +28,10 @@ namespace MvcMovie.Controllers
             return View();
         }
 
-        public IActionResult StationList()
+        public async Task<IActionResult> StationListAsync()
         {
-            return View();
+            var stations = await ServiceRepository.Station();
+            return View(stations);
         }
 
         public IActionResult Card()

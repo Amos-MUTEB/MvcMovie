@@ -1,8 +1,17 @@
-﻿@{
+﻿@model List<MvcMovie.Models.Station>
+@{
     ViewData["Title"] = "StationList";
 }
 
 <div class="text-center">
     <h1 class="display-4">Listes des stations</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+    @foreach (var bike in Model)
+    {
+        <p>@bike.name</p>
+    }
+
+<div>
+   
 </div>

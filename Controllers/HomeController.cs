@@ -23,7 +23,17 @@ namespace MvcMovie.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult StationList()
+        {
+            return View();
+        }
+
+        public IActionResult Card()
+        {
+            return View();
+        }
+
+        public IActionResult Favorite()
         {
             return View();
         }

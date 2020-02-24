@@ -4,14 +4,38 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Listes des stations</h1>
+    <h1 class="display-4">Liste des stations</h1>
+
+    <div>
+        
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Vélos disponibles</th>
+                        <th scope="col">Adresse</th>
+                        <th scope="col">Commune</th>
+                        <th scope="col">Code postal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var bike in Model)
+                    {
+                        <tr>
+                            <th scope="row"></th>
+                            <td>@bike.available_bikes</td>
+                            <td>@bike.address</td>
+                            <td>@bike.commune</td>
+                            <td>@bike.code_insee</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
 </div>
 
-    @foreach (var bike in Model)
-    {
-        <p>@bike.name</p>
-    }
 
-<div>
-   
-</div>

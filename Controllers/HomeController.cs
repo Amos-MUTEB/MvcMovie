@@ -34,9 +34,10 @@ namespace MvcMovie.Controllers
             return View(stations);
         }
 
-        public IActionResult Card()
+        public async Task<IActionResult> CardAsync()
         {
-            return View();
+            var cards = await ServiceRepository.Station();
+            return View(cards);
         }
 
         public IActionResult Favorite()

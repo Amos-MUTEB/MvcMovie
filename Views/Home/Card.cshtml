@@ -20,7 +20,7 @@
 
     <div class="text-center">
         <h1 class="display-4">Cartes</h1>
-        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <p></p>
     </div>
     <div id="map">
         <!-- Ici s'affichera la carte -->
@@ -35,15 +35,19 @@
         var macarte = null;
        
         var bikes = {
-        @foreach (var bike in Model) {
+        @foreach (var bike in Model)
+        {
             <text>
             "@bike.name": { 
                 "lat": @bike.lat,
-                "lon": @bike.lng
+                "lon": @bike.lng,
+                "place": "@bike.available_bike_stands",
+                "velo": "@bike.available_bikes"
+            
             },
             </text> 
-        }
-    };
+            }
+        };
          
          
         // Fonction d'initialisation de la carte
@@ -62,7 +66,8 @@
             // Nous parcourons la liste des villes
             for (bike in this.bikes) {
                 var marker = L.marker([bikes[bike].lat, bikes[bike].lon]).addTo(macarte);
-                marker.bindPopup(bike);
+                marker.bindPopup("<b>Place : </b>" + bike + "<br>" + "<b>Nombre des vélos disponibles : </b>" + bikes[bike].velo + "<br>" + "<b>Nombre des places disponibles pour les vélos : </b>" + bikes[bike].place
+                );
 	}      
         }
 

@@ -1,8 +1,45 @@
-﻿@{
+﻿@model List<MvcMovie.Models.Station>
+@{
     ViewData["Title"] = "Favorite";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<div class="text-center">
-    <h1 class="display-4">Mes Favoris</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+</head>
+
+<body>
+
+    <div class="text-center">
+        <h1 class="display-4">Mes Favoris</h1>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Vélos disponibles</th>
+                    <th scope="col">Adresse</th>
+                    <th scope="col">Commune</th>
+                    <th scope="col">Code postal</th>
+                    <th scope="col">Retirer des favoris</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td>Vélos disponibles</td>
+                    <td>Adresses</td>
+                    <td>Communes</td>
+                    <td>Code postale</td>
+                    <td><button id="btn-toggle">Retirer</button></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+</html>

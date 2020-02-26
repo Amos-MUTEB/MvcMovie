@@ -24,7 +24,15 @@ namespace MvcMovie.Models
 
             return RootObject.values;
         }
-        
+
+        public static async Task<List<StationBdx>> StationBdx()
+        {
+            var ApiData = client.GetStreamAsync("https://api.alexandredubois.com/vcub-backend/vcub.php");
+            var RootObject = await JsonSerializer.DeserializeAsync<List<StationBdx>>(await ApiData);
+
+            return RootObject;
+        }
+
     }
 
 }

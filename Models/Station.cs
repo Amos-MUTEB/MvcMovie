@@ -36,5 +36,34 @@ namespace MvcMovie.Models
 
    
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+
+        public Station()
+        {
+
+        }
+        public Station(StationBdx stationBdx)
+        {
+            lat = stationBdx.latitude;
+            lng = stationBdx.longitude;
+            name = stationBdx.name;
+            status = stationBdx.is_online ? "OPEN" : "CLOSED";
+            available_bikes = stationBdx.bike_count_total.ToString();
+        }
+
+
+    }
+
+
+    public class StationBdx
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public int bike_count { get; set; }
+        public int electric_bike_count { get; set; }
+        public int bike_count_total { get; set; }
+        public int slot_count { get; set; }
+        public bool is_online { get; set; }
+        public string latitude { get; set; }
+        public string longitude { get; set; }
     }
 }

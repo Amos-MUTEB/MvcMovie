@@ -310,6 +310,11 @@
         "runtime": {
           "MvcMovie.dll": {}
         },
+        "resources": {
+          "es/MvcMovie.resources.dll": {
+            "locale": "es"
+          }
+        },
         "compile": {
           "MvcMovie.dll": {}
         }

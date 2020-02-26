@@ -3,39 +3,80 @@
     ViewData["Title"] = "StationList";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Liste des stations</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+         $('.btn-click').click(function() {
+    $("body").css("background","#AFD629");
+})
+        // These condition will change the body background color when toggle button clicked
+        $('#btn-toggle').click(function () {
+            $("body").toggleClass("second-color");
+        })
+    </script>
+    <style>
+        body {
+            background: #EEA011;
+            transition: background 1s ease 0s;
+        }
 
-    <div>
-        
+        button {
+            background: rgba(255,255,255,0.3);
+            border-radius: 10px;
+            border: 1px solid #FFF;
+            padding: 10px;
+            color: #ffffff;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 1px;
+            box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.3)
+        }
+
+        .second-color {
+            background: #AFD629 !important;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="text-center">
+        <h1 class="display-4">Liste des stations</h1>
+
         <div>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Vélos disponibles</th>
-                        <th scope="col">Adresse</th>
-                        <th scope="col">Commune</th>
-                        <th scope="col">Code postal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var bike in Model)
-                    {
+
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Vélos disponibles</th>
+                            <th scope="col">Adresse</th>
+                            <th scope="col">Commune</th>
+                            <th scope="col">Code postal</th>
+                            <th scope="col">Favoris</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var bike in Model)
+                        {
+
                         <tr>
                             <th scope="row"></th>
                             <td>@bike.available_bikes</td>
                             <td>@bike.address</td>
                             <td>@bike.commune</td>
                             <td>@bike.code_insee</td>
+                            <td><button id="btn-toggle">Ajouter</button></td>
                         </tr>
-                    }
-                </tbody>
-            </table>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
         </div>
-        
+
     </div>
-
-</div>
-
+    </body>
+</html>
 

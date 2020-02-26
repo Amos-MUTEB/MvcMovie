@@ -35,3 +35,7 @@ C:\Users\amosm\source\repos\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.csproj.Cop
 C:\Users\amosm\source\repos\MvcMovie\obj\Debug\netcoreapp3.1\Razor\Views\Home\Card.cshtml.g.cs
 C:\Users\amosm\source\repos\MvcMovie\obj\Debug\netcoreapp3.1\Razor\Views\Home\Favorite.cshtml.g.cs
 C:\Users\amosm\source\repos\MvcMovie\obj\Debug\netcoreapp3.1\Razor\Views\Home\StationList.cshtml.g.cs
+C:\Users\amosm\source\repos\MvcMovie\bin\Debug\netcoreapp3.1\es\MvcMovie.resources.dll
+C:\Users\amosm\source\repos\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.Ressources.Welcome.es.resources
+C:\Users\amosm\source\repos\MvcMovie\obj\Debug\netcoreapp3.1\MvcMovie.csproj.GenerateResource.cache
+C:\Users\amosm\source\repos\MvcMovie\obj\Debug\netcoreapp3.1\es\MvcMovie.resources.dll

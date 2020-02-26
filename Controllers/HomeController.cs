@@ -37,6 +37,17 @@ namespace MvcMovie.Controllers
         public async Task<IActionResult> CardAsync()
         {
             var cards = await ServiceRepository.Station();
+            var cardsBdx = await ServiceRepository.StationBdx();
+
+            var ResultBdx = new List<Station>();
+            foreach (var stationBdx in cardsBdx)
+            {
+                var construit = new Station(stationBdx);
+                ResultBdx.Add(construit);
+            }
+
+            cards.AddRange(ResultBdx);
+
             return View(cards);
         }
 
